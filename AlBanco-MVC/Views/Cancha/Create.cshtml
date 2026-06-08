@@ -1,0 +1,66 @@
+@model AlBanco_MVC.Models.Cancha
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Cancha</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Direccion" class="control-label"></label>
+                <input asp-for="Direccion" class="form-control" />
+                <span asp-validation-for="Direccion" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ZonaId" class="control-label"></label>
+                <input asp-for="ZonaId" class="form-control" />
+                <span asp-validation-for="ZonaId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Zona" class="control-label"></label>
+                <input asp-for="Zona" class="form-control" />
+                <span asp-validation-for="Zona" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CodigoQR" class="control-label"></label>
+                <input asp-for="CodigoQR" class="form-control" />
+                <span asp-validation-for="CodigoQR" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Usuarios" class="control-label"></label>
+                <input asp-for="Usuarios" class="form-control" />
+                <span asp-validation-for="Usuarios" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Convocatorias" class="control-label"></label>
+                <input asp-for="Convocatorias" class="form-control" />
+                <span asp-validation-for="Convocatorias" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,68 @@
+@model IEnumerable<AlBanco_MVC.Models.Convocatoria>
+
+@{
+    ViewData["Title"] = "Me falta uno";
+}
+
+<!-- Header Section -->
+<div class="flex-grow-1 d-flex flex-column align-items-center py-4 py-md-5 px-3">
+<div class="w-100 mb-4" style="max-width: 600px;">
+    <div class="d-flex align-items-center gap-2 mb-2">
+        <button class="btn btn-link p-0 text-success text-decoration-none" onclick="history.back()">
+            <span class="material-symbols-outlined fs-4">arrow_back</span>
+        </button>
+        <h1 class="fs-2 fw-bold text-dark mb-0">⚽ Me faltan jugadores</h1>
+    </div>
+    <p class="text-secondary mb-0">Completa los detalles para encontrar los jugadores que faltan para tu partido.</p>
+</div>
+<!-- Request Form Card -->
+<div class="w-100 card custom-shadow rounded-4 border-0 mb-5" style="max-width: 600px;">
+    <div class="card-body p-4 p-md-4">
+        <form id="matchRequestForm">
+            <!-- Grid for Date and Time -->
+            <div class="row g-3 mb-3">
+                <div class="col-6">
+                    <label class="form-label fw-semibold text-secondary">Fecha</label>
+                    <input class="form-control form-control-lg bg-light" required="" type="date" />
+                </div>
+                <div class="col-6">
+                    <label class="form-label fw-semibold text-secondary">Hora</label>
+                    <input class="form-control form-control-lg bg-light" required="" type="time" />
+                </div>
+            </div>
+            <!-- Quantity of Players -->
+            <div class="mb-3">
+                <label class="form-label fw-semibold text-secondary">¿Cuántos faltan?</label>
+                <div class="input-group input-group-lg">
+                    <input class="form-control bg-light" max="22" min="1" placeholder="Ej: 2" required="" type="number" />
+                    <span class="input-group-text bg-light text-success border-start-0"><span class="material-symbols-outlined">groups</span></span>
+                </div>
+            </div>
+            <!-- Price per Player -->
+            <div class="mb-3">
+                <label class="form-label fw-semibold text-secondary">Precio por jugador ($)</label>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text bg-light text-secondary border-end-0">$</span>
+                    <input class="form-control bg-light border-start-0" placeholder="0.00" required="" type="number" />
+                </div>
+            </div>
+            <!-- Observations -->
+            <div class="mb-4">
+                <label class="form-label fw-semibold text-secondary">Observaciones</label>
+                <textarea class="form-control bg-light" placeholder="Ej: Llevar camiseta blanca" rows="3"></textarea>
+            </div>
+            <!-- CTA Button -->
+            <button class="btn btn-success btn-lg w-100 py-3 fw-bold d-flex align-items-center justify-content-center gap-2" type="submit">
+                <span>⚽ BUSCAR JUGADORES</span>
+            </button>
+        </form>
+    </div>
+</div>
+<!-- Visual Context Image (Aspirational) -->
+<div class="w-100 rounded-4 overflow-hidden position-relative mb-5" style="max-width: 600px; height: 192px;">
+    <img class="w-100 h-100 object-fit-cover hover-scale" data-alt="A cinematic, low-angle shot of a vibrant green professional football pitch under bright stadium floodlights at dusk. The atmosphere is energetic and ready for action, with soft mist catching the light. The colors are dominated by deep grass greens and crisp white line markings, aligning with the clean, athletic corporate identity of a modern sports application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5kzWKQnssM6IldCARZGApiJcEP-EC0HziUH0AQUm1oc-67j71UZ6t67E3BiOuGfBekQEmGlqLkT6MLYDZy-q1LhxfLSvLVnyyvNVkd-oeFukCcqXK4o0OArz60U9d3YKp07R-Pzle2v88jVaIcQ8d3R_VJPqbYuaNrkuZHsCBzXDi_V03ZT_AanawUwto121f4TFa_te21O-Gf2jn5vkwK75ir448P_Co0-adwkXyxJ7EB9pAeDUu-NMKLsMsm50xAWTkEoBvKw" />
+    <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);">
+        <p class="text-white fw-medium fst-italic mb-0">"Tu equipo te está esperando en la cancha."</p>
+    </div>
+</div>
+</div>
