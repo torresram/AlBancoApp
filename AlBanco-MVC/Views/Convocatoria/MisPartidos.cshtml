@@ -1,0 +1,159 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<div class="flex-grow-1 container py-4 py-md-5">
+    <!-- Header Section -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 mb-md-5 gap-3">
+        <div>
+            <h1 class="fw-bold mb-2 fs-2">Mis Solicitudes</h1>
+            <p class="text-secondary mb-0">Gestiona los partidos que has organizado y el estado de los jugadores que te faltan.</p>
+        </div>
+        <button class="btn btn-primary d-flex align-items-center justify-content-center gap-2 fw-semibold px-4 py-2 rounded-3 w-100 w-md-auto">
+            <span class="material-symbols-outlined">add</span>
+            CREAR NUEVA SOLICITUD
+        </button>
+    </div>
+    <!-- Layout -->
+    <div class="row g-4">
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            <div class="card mb-3 shadow-sm border-light rounded-4">
+                <div class="card-body p-4">
+                    <h6 class="text-secondary text-uppercase fw-semibold mb-3 fs-6">Resumen</h6>
+                    <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span class="text-dark">Abiertas</span>
+                        <span class="fs-4 fw-bold text-primary">3</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2">
+                        <span class="text-dark">Completas</span>
+                        <span class="fs-4 fw-bold text-secondary">12</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-primary-subtle border-0 rounded-4">
+                <div class="card-body p-4">
+                    <p class="text-uppercase fw-semibold mb-1 next-game">PRÓXIMO JUEGO</p>
+                    <p class="fs-5 fw-bold mb-0 next-game">Mañana, 20:00</p>
+                    <p class="mb-0 next-game-muted">Sede San Isidro</p>
+                </div>
+            </div>
+        </div>
+        <!-- Main List -->
+        <div class="col-md-9 d-flex flex-column gap-3">
+            <!-- Card 1: Abierta -->
+            <div class="card shadow-sm border-light rounded-4 overflow-hidden hover-card">
+                <div class="row g-0 h-100">
+                    <div class="col-md-4 col-lg-3 img-container">
+                        <img alt="Football field" class="card-img-left" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM948aFr_yaKCX-HhRRvdZ77AcKYcmKaojmeI43rUzx0FP2oicyisUJyHYWGsIyOKRXH-IHTRl6RZgYZjA5WwSXwnwyNgY0oPc7DFPvXbFcGLbFMQCqeyjFH5TjO0oBEhaUCE5DQ2U6ka3HEgThTIaPMNKdZBaxvgDSJV58_0qaXd2fF8MkyQWTcDJxyAOAwYRMfLhlFbO5zgVBhCOHovH1a0QrweT7OzK503-jw5styn2vuCMrPvwwujpLuigiYDeEj8NaZz9mQ" />
+                        <span class="badge bg-success position-absolute top-0 start-0 m-3 text-uppercase px-2 py-1 tracking-wide">Abierta</span>
+                    </div>
+                    <div class="col-md-8 col-lg-9">
+                        <div class="card-body p-4 d-flex flex-column h-100 justify-content-between">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-2 fs-5">Fútbol 5 - Los Galácticos</h5>
+                                    <div class="d-flex gap-3 text-secondary small">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <span class="material-symbols-outlined fs-6">calendar_today</span>
+                                            <span>Viernes, 24 Mayo</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <span class="material-symbols-outlined fs-6">schedule</span>
+                                            <span>21:00 hs</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <div class="text-secondary small fw-semibold">FALTAN</div>
+                                    <div class="fs-4 fw-bold text-primary lh-1">2</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center border-top pt-3 mt-3 gap-3">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="avatar-group">
+                                        <img alt="Player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhRljt4xaDyMkjSJqWqVO_eDH46lmk1K64MEn4FgleoX3G-L3TifVuthjziHLjWr39VPj7XRy04I7LgKE7xBDzUEMPqcGbQBazbWOSZSCMa5aP6VXCFRTs8JvvhWkq5Wel4foiJffwEP7eqo3QBuhs0knxwptMbGLRBm3W7kt_tADT_yjHBIlEqANMhKSW8T0g0aki6dX8FxCHPqWxpWKb39sQPwUSORdROCoYFVezZnbGeSQs5b-rfgBZWgmklcuMZu1QzbpkLw" />
+                                        <img alt="Player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsAs7p1D4Br-kwx7US9cf7JY-NYah-oAsFA5AvY3HhZRCtgL4jBNM89iv0iHVGZ_uFLYewzwFYY2dCTefMxef1HFrhe-Z7gV9096fNKLIkF7XrmLJuQCqVRZ2GVEEGMcKVbbXjwwo80VnPRVadHstUsBwFF2zS--mRwvGzbqHhSZhr3BVKDI1Rdt_eo7gaPEyOWgkqDRpkA0if8IG4gmw6rz0qMkoAw3MySDFikV5vhk-TZrG7RgXQidAsNfLJ-N3XzTeRRn8mxw" />
+                                        <img alt="Player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSa19N5Vmfi_2m_n44DU04tEcLDzzt5sAM_TR5jPNvfDR5EoM9kntE1b8sdwgjJCK0rbnIF5r7S20vb77tH4HhXAJwLv54kuy0Gicb3ECSDBSQ0pAFMwcuFG_BzoHKUAq8wukuJD6JqKHxu6qtPr04N7sMHxuZRqYrqeHQ4u0cukrZz9zQccrteKYDwKfpch7w5Uz_bH3dRDuDWwHSddQv3bHjCAmFSqNkmxm5Fqt7tiqNh_z_V7mBT8_KDE5MYgPR9JmF-6jCkA" />
+                                        <div class="avatar-more">+5</div>
+                                    </div>
+                                    <span class="text-secondary small">8/10 Confirmados</span>
+                                </div>
+                                <button class="btn btn-outline-primary fw-semibold px-4 w-100 w-md-auto">Ver detalle</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2: Completa -->
+            <div class="card shadow-sm border-light rounded-4 overflow-hidden opacity-90">
+                <div class="row g-0 h-100">
+                    <div class="col-md-4 col-lg-3 img-container grayscale">
+                        <img alt="Football shoes" class="card-img-left" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJCoy40wFIHhGOD8jgHfMCMZZciLuwqRtT0_HSsq7myJfC7EgRCDaijeTqtlVUt4FkWvCRTiQ5iGy-92TIRmfASuff-30Gc_rAST6N5NQG16HiFighHUJ2xce3sxR4lQscF_hfCLoO2BCEAp0gIni7o-LdydPh_meoSiOTv_vjaBjVIr4gEiHniPZlpih6uTW_NnjADXGKx7HrXfVIUxiBvN0UJma8MX3JkPl8KILbDGIKJzwwnUn9k72QNTkDjePBYHrTaqVEEA" />
+                        <span class="badge bg-secondary position-absolute top-0 start-0 m-3 text-uppercase px-2 py-1 tracking-wide">Completa</span>
+                    </div>
+                    <div class="col-md-8 col-lg-9">
+                        <div class="card-body p-4 d-flex flex-column h-100 justify-content-between">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-2 fs-5">Fútbol 7 - Inter de Banfield</h5>
+                                    <div class="d-flex gap-3 text-secondary small">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <span class="material-symbols-outlined fs-6">calendar_today</span>
+                                            <span>Sábado, 25 Mayo</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <span class="material-symbols-outlined fs-6">schedule</span>
+                                            <span>10:00 hs</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <div class="text-secondary small fw-semibold">FALTAN</div>
+                                    <div class="fs-4 fw-bold text-secondary lh-1">0</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center border-top pt-3 mt-3 gap-3">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="text-primary fw-bold">¡Equipo listo!</span>
+                                    <span class="text-secondary small">14/14 Confirmados</span>
+                                </div>
+                                <button class="btn btn-outline-secondary fw-semibold px-4 w-100 w-md-auto">Ver detalle</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3: Cancelada -->
+            <div class="card shadow-sm border-light rounded-4 overflow-hidden opacity-70">
+                <div class="row g-0 h-100">
+                    <div class="col-md-4 col-lg-3 img-container grayscale-muted">
+                        <img alt="Rainy pitch" class="card-img-left" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkI7fA0dgshpI0vc41obZ-Exyqk8A7C_8P_LbWr2Scg1Rj0UawWKgsbo5-TjMz26BWb_xgyzt7k4GmLSJjOSC5JHRgnPkYRgGsj3nggty8rQrx6M6xXpz7CPINGPjFW3Y3Ze2-tLI6cEpCKeTCcakNq3-qhGpk05PlYqglAQl0DNBX2lU5-1psHhsgsisq3ST__Xxtocoek3Um2S3a2e5r_fZ4x8FSN83yJmI2Wyy_EJtkNaLdotyn5l7WTnoKIwDlHg7FQyhnug" />
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-3 text-uppercase px-2 py-1 tracking-wide">Cancelada</span>
+                    </div>
+                    <div class="col-md-8 col-lg-9">
+                        <div class="card-body p-4 d-flex flex-column h-100 justify-content-between">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-2 fs-5 text-secondary text-decoration-line-through">Fútbol 5 - Los Pibes FC</h5>
+                                    <div class="d-flex gap-3 text-secondary small">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <span class="material-symbols-outlined fs-6">calendar_today</span>
+                                            <span>Hoy</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center border-top pt-3 mt-3 gap-3">
+                                <div class="d-flex align-items-center gap-2 text-danger">
+                                    <span class="material-symbols-outlined fs-5">error_outline</span>
+                                    <span>Evento cancelado por el organizador</span>
+                                </div>
+                                <button class="btn btn-outline-secondary fw-semibold px-4 w-100 w-md-auto">Ver detalle</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

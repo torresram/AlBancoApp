@@ -31,44 +31,20 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/ramir/Documents/programacion/ASP.NET Core MVC/AlBancoApp/AlBanco-MVC/Views/Cancha/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuY2hhXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ramir/Documents/programacion/ASP.NET Core MVC/AlBancoApp/AlBanco-MVC/Views/Cancha/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuY2hhXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ramir/Documents/programacion/ASP.NET Core MVC/AlBancoApp/AlBanco-MVC/Views/Cancha/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuY2hhXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ramir/Documents/programacion/ASP.NET Core MVC/AlBancoApp/AlBanco-MVC/Views/Cancha/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuY2hhXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/ramir/Documents/programacion/ASP.NET Core MVC/AlBancoApp/AlBanco-MVC/Views/Cancha/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuY2hhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramir/Documents/programacion/ASP.NET Core MVC/AlBancoApp/AlBanco-MVC/Views/Convocatoria/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udm9jYXRvcmlhXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ramir/Documents/programacion/ASP.NET Core MVC/AlBancoApp/AlBanco-MVC/Views/Convocatoria/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udm9jYXRvcmlhXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ramir/Documents/programacion/ASP.NET Core MVC/AlBancoApp/AlBanco-MVC/Views/Convocatoria/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udm9jYXRvcmlhXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ramir/Documents/programacion/ASP.NET Core MVC/AlBancoApp/AlBanco-MVC/Views/Convocatoria/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udm9jYXRvcmlhXEVkaXQuY3NodG1s
+[C:/Users/ramir/Documents/programacion/ASP.NET Core MVC/AlBancoApp/AlBanco-MVC/Views/Convocatoria/FaltaUno.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udm9jYXRvcmlhXEZhbHRhVW5vLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ramir/Documents/programacion/ASP.NET Core MVC/AlBancoApp/AlBanco-MVC/Views/Convocatoria/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udm9jYXRvcmlhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ramir/Documents/programacion/ASP.NET Core MVC/AlBancoApp/AlBanco-MVC/Views/Convocatoria/MisPartidos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udm9jYXRvcmlhXE1pc1BhcnRpZG9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ramir/Documents/programacion/ASP.NET Core MVC/AlBancoApp/AlBanco-MVC/Views/Home/Index.cshtml]
@@ -103,8 +79,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ramir/Documents/programacion/ASP.NET Core MVC/AlBancoApp/AlBanco-MVC/Views/Usuario/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
+[C:/Users/ramir/Documents/programacion/ASP.NET Core MVC/AlBancoApp/AlBanco-MVC/Views/Usuario/MiPerfil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xNaVBlcmZpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ramir/Documents/programacion/ASP.NET Core MVC/AlBancoApp/AlBanco-MVC/Views/_ViewImports.cshtml]

@@ -48,10 +48,10 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
-app.MapRazorPages();
-app.UseAuthorization();
 app.UseAuthentication();
+app.UseAuthorization();
 app.MapStaticAssets();
+app.MapRazorPages();
 
 app.MapControllerRoute(
     name: "default",

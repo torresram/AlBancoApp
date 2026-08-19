@@ -18,7 +18,7 @@ namespace AlBanco_MVC.Data
             // ─── ZONAS ─────────────────────────────────────────
             var zonas = new List<Zona>
         {
-                new() { Nombre = "Palermo" },
+            new() { Nombre = "Palermo" },
             new() { Nombre = "Belgrano" },
             new() { Nombre = "Caballito" },
             new() { Nombre = "Villa Crespo" },
@@ -132,18 +132,18 @@ namespace AlBanco_MVC.Data
             // ─── CONVOCATORIAS ─────────────────────────────────
             var convocatorias = new List<Convocatoria>
         {
-                new()
-                {
-                    FechaPartido = new DateTime(2026, 6, 10, 0, 0, 0, DateTimeKind.Utc),
-                    HoraPartido = new TimeSpan(21, 0, 0),
-                    JugadoresNecesarios = 2,
-                    PrecioPorJugador = 8000,
-                    Observaciones = "Fútbol 7, traer camiseta blanca",
-                    Estado = EstadoConvocatoria.Abierta,
-                    FechaCreacion = new DateTime(2026, 6, 5, 12, 0, 0, DateTimeKind.Utc),
-                    CanchaId = bombonerita.Id,
-                    UsuarioId = juan.Id
-                },
+            new()
+            {
+                FechaPartido = new DateTime(2026, 6, 10, 0, 0, 0, DateTimeKind.Utc),
+                HoraPartido = new TimeSpan(21, 0, 0),
+                JugadoresNecesarios = 2,
+                PrecioPorJugador = 8000,
+                Observaciones = "Fútbol 7, traer camiseta blanca",
+                Estado = EstadoConvocatoria.Abierta,
+                FechaCreacion = new DateTime(2026, 6, 5, 12, 0, 0, DateTimeKind.Utc),
+                CanchaId = bombonerita.Id,
+                UsuarioId = juan.Id
+            },
             new()
             {
                 FechaPartido = new DateTime(2026, 6, 12, 0, 0, 0, DateTimeKind.Utc),
@@ -168,8 +168,7 @@ namespace AlBanco_MVC.Data
                 CanchaId = monumentalito.Id,
                 UsuarioId = lucas.Id
             }
-        }
-            ;
+        };
 
             context.Convocatorias.AddRange(convocatorias);
             context.SaveChanges();
@@ -181,13 +180,13 @@ namespace AlBanco_MVC.Data
             // ─── CONFIRMACIONES ────────────────────────────────
             var confirmaciones = new List<Confirmacion>
         {
-                new()
-                {
-                    FechaConfirmacion = new DateTime(2026, 6, 5, 14, 20, 0, DateTimeKind.Utc),
-                    Estado = EstadoConfirmacion.Confirmado,
-                    UsuarioId = pedro.Id,
-                    ConvocatoriaId = conv1.Id
-                },
+            new()
+            {
+                FechaConfirmacion = new DateTime(2026, 6, 5, 14, 20, 0, DateTimeKind.Utc),
+                Estado = EstadoConfirmacion.Confirmado,
+                UsuarioId = pedro.Id,
+                ConvocatoriaId = conv1.Id
+            },
             new()
             {
                 FechaConfirmacion = new DateTime(2026, 6, 6, 9, 45, 0, DateTimeKind.Utc),
@@ -202,8 +201,7 @@ namespace AlBanco_MVC.Data
                 UsuarioId = diego.Id,
                 ConvocatoriaId = conv3.Id
             }
-        }
-            ;
+        };
 
             context.Confirmaciones.AddRange(confirmaciones);
             context.SaveChanges();

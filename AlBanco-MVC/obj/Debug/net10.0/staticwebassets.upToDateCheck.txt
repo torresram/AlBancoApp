@@ -1,4 +1,3 @@
-wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
@@ -61,8 +60,6 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-C:\Users\ramir\Documents\programacion\ASP.NET Core MVC\AlBancoApp\AlBanco-MVC\wwwroot\css\site.css
-C:\Users\ramir\Documents\programacion\ASP.NET Core MVC\AlBancoApp\AlBanco-MVC\wwwroot\favicon.ico
 C:\Users\ramir\Documents\programacion\ASP.NET Core MVC\AlBancoApp\AlBanco-MVC\wwwroot\js\site.js
 C:\Users\ramir\Documents\programacion\ASP.NET Core MVC\AlBancoApp\AlBanco-MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\ramir\Documents\programacion\ASP.NET Core MVC\AlBancoApp\AlBanco-MVC\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -123,3 +120,4 @@ C:\Users\ramir\Documents\programacion\ASP.NET Core MVC\AlBancoApp\AlBanco-MVC\ww
 C:\Users\ramir\Documents\programacion\ASP.NET Core MVC\AlBancoApp\AlBanco-MVC\wwwroot\lib\jquery\dist\jquery.slim.min.js
 C:\Users\ramir\Documents\programacion\ASP.NET Core MVC\AlBancoApp\AlBanco-MVC\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\ramir\Documents\programacion\ASP.NET Core MVC\AlBancoApp\AlBanco-MVC\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\ramir\Documents\programacion\ASP.NET Core MVC\AlBancoApp\AlBanco-MVC\wwwroot\favicon.ico

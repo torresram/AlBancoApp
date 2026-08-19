@@ -1,68 +1,138 @@
 @model IEnumerable<AlBanco_MVC.Models.Convocatoria>
 
 @{
-    ViewData["Title"] = "Me falta uno";
+    ViewData["Title"] = "Encontrar Partidos";
 }
-
-<!-- Header Section -->
-<div class="flex-grow-1 d-flex flex-column align-items-center py-4 py-md-5 px-3">
-<div class="w-100 mb-4" style="max-width: 600px;">
-    <div class="d-flex align-items-center gap-2 mb-2">
-        <button class="btn btn-link p-0 text-success text-decoration-none" onclick="history.back()">
-            <span class="material-symbols-outlined fs-4">arrow_back</span>
-        </button>
-        <h1 class="fs-2 fw-bold text-dark mb-0">⚽ Me faltan jugadores</h1>
+<div class="container py-5 flex-grow-1">
+    <!-- Header Section -->
+    <div class="mb-5 text-center text-md-start">
+        <h1 class="fw-bold mb-2">Invitaciones a Partidos</h1>
+        <p class="text-secondary mb-0">Mirá quién busca jugadores y sumate al equipo.</p>
     </div>
-    <p class="text-secondary mb-0">Completa los detalles para encontrar los jugadores que faltan para tu partido.</p>
-</div>
-<!-- Request Form Card -->
-<div class="w-100 card custom-shadow rounded-4 border-0 mb-5" style="max-width: 600px;">
-    <div class="card-body p-4 p-md-4">
-        <form id="matchRequestForm">
-            <!-- Grid for Date and Time -->
-            <div class="row g-3 mb-3">
-                <div class="col-6">
-                    <label class="form-label fw-semibold text-secondary">Fecha</label>
-                    <input class="form-control form-control-lg bg-light" required="" type="date" />
+    <!-- Requests List (Bootstrap Grid) -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <!-- Card 1 -->
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                <div class="position-relative view-height-200">
+                    <img alt="Football pitch" class="w-100 h-100 object-fit-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_eBnPZL9HjzixO1dVoyc5K17Y1rz0GAvTG6fSzgNrNGO17JcxMDOeKcisRIaFNAyCJ6eFt2h3XU5ah9SlzVY1w5M2AWRpJMjkb7t5zQxlQKHupv4BFaUsxXxHkXZIrIBu4ILOq4C4KZ445s1lEteEr1Y-TH9OphUIJphqkLpxJBhunnigH7Qi0-TpmKe7pR_R4To3W9vKFJDYNPNKHKffyIc5_OvEgIPlI-KdYBLgZIv_2uKMHcIZT81KpvmilaSLu-UkkZBv2Q" />
+                    <div class="position-absolute top-0 start-0 m-3">
+                        <span class="badge bg-danger text-uppercase p-2">Faltan jugadores</span>
+                    </div>
                 </div>
-                <div class="col-6">
-                    <label class="form-label fw-semibold text-secondary">Hora</label>
-                    <input class="form-control form-control-lg bg-light" required="" type="time" />
+                <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h5 class="card-title fw-bold mb-0">Camp Nou de Banfield</h5>
+                        <span class="badge bg-secondary fs-6">$1.200</span>
+                    </div>
+                    <div class="row g-2 text-secondary mb-4">
+                        <div class="col-6 d-flex align-items-center gap-2">
+                            <span class="material-symbols-outlined fs-5">calendar_today</span>
+                            <span class="small fw-medium">Hoy, 24 Oct</span>
+                        </div>
+                        <div class="col-6 d-flex align-items-center gap-2">
+                            <span class="material-symbols-outlined fs-5">schedule</span>
+                            <span class="small fw-medium">21:00 hs</span>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-uppercase text-muted small fw-bold mb-1 text-letter-spaced">Observaciones</p>   
+                        <p class="card-text fst-italic text-secondary">"Traer pechera blanca si tenés. El arquero ya está confirmado."</p>
+                    </div>
+                    <div class="mt-auto d-flex gap-2">
+                        <button class="btn btn-success flex-grow-1 fw-bold d-flex align-items-center justify-content-center gap-1 py-2">
+                            <span class="material-symbols-outlined fs-5">check_circle</span>
+                            VOY
+                        </button>
+                        <button class="btn btn-outline-secondary fw-bold d-flex align-items-center justify-content-center gap-1 py-2 px-3">
+                            <span class="material-symbols-outlined fs-5">cancel</span>
+                            NO PUEDO
+                        </button>
+                    </div>
                 </div>
             </div>
-            <!-- Quantity of Players -->
-            <div class="mb-3">
-                <label class="form-label fw-semibold text-secondary">¿Cuántos faltan?</label>
-                <div class="input-group input-group-lg">
-                    <input class="form-control bg-light" max="22" min="1" placeholder="Ej: 2" required="" type="number" />
-                    <span class="input-group-text bg-light text-success border-start-0"><span class="material-symbols-outlined">groups</span></span>
+        </div>
+        <!-- Card 2 -->
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                <div class="position-relative view-height-200">
+                    <img alt="Indoor Arena" class="w-100 h-100 object-fit-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApbr_oKtbCrsMiIRFU_muLjOmqT0wkbb_b8-dNxmlhwdf-bUAQ4jfw9D5dF5Q7Pdhx2yqa0LxsupB-F7zVPh65Ndsh5i0G9gYypdb1Qp8YvtEBFFfDm3Fwaw-9v0XqWMKcuPAQdcEQu2k44oS_Az5_Q3Tpu2FN0fz4KU3mGWxrcpjrCnTd2CR1SJXpW2MBCSKpbCPuuWmzpR8JdQHe01cnKoLk7qSDhASX66ms-Que9ZtpBr0z1Tdz7ZgEkxnv7fdhhJS7Lhw7wQ" />
+                    <div class="position-absolute top-0 start-0 m-3">
+                        <span class="badge bg-danger text-uppercase p-2">Faltan jugadores</span>
+                    </div>
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h5 class="card-title fw-bold mb-0">Complejo El Diez</h5>
+                        <span class="badge bg-secondary fs-6">$1.500</span>
+                    </div>
+                    <div class="row g-2 text-secondary mb-4">
+                        <div class="col-6 d-flex align-items-center gap-2">
+                            <span class="material-symbols-outlined fs-5">calendar_today</span>
+                            <span class="small fw-medium">Mañana, 25 Oct</span>
+                        </div>
+                        <div class="col-6 d-flex align-items-center gap-2">
+                            <span class="material-symbols-outlined fs-5">schedule</span>
+                            <span class="small fw-medium">19:30 hs</span>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-uppercase text-muted small fw-bold mb-1 text-letter-spaced">Observaciones</p>
+                        <p class="card-text fst-italic text-secondary">"Falta 1 delantero picante. Nivel intermedio. Vení con ganas de correr."</p>
+                    </div>
+                    <div class="mt-auto d-flex gap-2">
+                        <button class="btn btn-success flex-grow-1 fw-bold d-flex align-items-center justify-content-center gap-1 py-2">
+                            <span class="material-symbols-outlined fs-5">check_circle</span>
+                            VOY
+                        </button>
+                        <button class="btn btn-outline-secondary fw-bold d-flex align-items-center justify-content-center gap-1 py-2 px-3">
+                            <span class="material-symbols-outlined fs-5">cancel</span>
+                            NO PUEDO
+                        </button>
+                    </div>
                 </div>
             </div>
-            <!-- Price per Player -->
-            <div class="mb-3">
-                <label class="form-label fw-semibold text-secondary">Precio por jugador ($)</label>
-                <div class="input-group input-group-lg">
-                    <span class="input-group-text bg-light text-secondary border-end-0">$</span>
-                    <input class="form-control bg-light border-start-0" placeholder="0.00" required="" type="number" />
+        </div>
+        <!-- Card 3 -->
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                <div class="position-relative view-height-200">
+                    <img alt="Urban Pitch" class="w-100 h-100 object-fit-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiVcTHwtH31xmAdK4mresbDaBLvtsh_kRPo_aPzFDp2FnoizqABCAJatpdCKQ48EUen4_3Nwjrq1bzXW5rPwSVBvzZ6xnm29uHjuoFcRUDTvAzJrpfIfvsPEte0HH0KcnFLuJK-hfDP4nPYRSG53dgSQwO2kL4CULHRfmqPxvrIy6yKDszPTW3LCwaFDnZNejzeHsmE0h8MvKnMM0LBoqnzL2MJisiR4Kxa0WIVeH-Hvs-PfM5qpejZs8eyzFOGcSHS335gwdndg" />
+                    <div class="position-absolute top-0 start-0 m-3">
+                        <span class="badge bg-danger text-uppercase p-2">Faltan jugadores</span>
+                    </div>
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h5 class="card-title fw-bold mb-0">Predio La Masía</h5>
+                        <span class="badge bg-secondary fs-6">$1.100</span>
+                    </div>
+                    <div class="row g-2 text-secondary mb-4">
+                        <div class="col-6 d-flex align-items-center gap-2">
+                            <span class="material-symbols-outlined fs-5">calendar_today</span>
+                            <span class="small fw-medium">Sáb, 26 Oct</span>
+                        </div>
+                        <div class="col-6 d-flex align-items-center gap-2">
+                            <span class="material-symbols-outlined fs-5">schedule</span>
+                            <span class="small fw-medium">11:00 hs</span>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-uppercase text-muted small fw-bold mb-1 text-letter-spaced">Observaciones</p>
+                        <p class="card-text fst-italic text-secondary">"Partido 7v7. Se paga en efectivo en el lugar. Venir 15 min antes."</p>
+                    </div>
+                    <div class="mt-auto d-flex gap-2">
+                        <button class="btn btn-success flex-grow-1 fw-bold d-flex align-items-center justify-content-center gap-1 py-2">
+                            <span class="material-symbols-outlined fs-5">check_circle</span>
+                            VOY
+                        </button>
+                        <button class="btn btn-outline-secondary fw-bold d-flex align-items-center justify-content-center gap-1 py-2 px-3">
+                            <span class="material-symbols-outlined fs-5">cancel</span>
+                            NO PUEDO
+                        </button>
+                    </div>
                 </div>
             </div>
-            <!-- Observations -->
-            <div class="mb-4">
-                <label class="form-label fw-semibold text-secondary">Observaciones</label>
-                <textarea class="form-control bg-light" placeholder="Ej: Llevar camiseta blanca" rows="3"></textarea>
-            </div>
-            <!-- CTA Button -->
-            <button class="btn btn-success btn-lg w-100 py-3 fw-bold d-flex align-items-center justify-content-center gap-2" type="submit">
-                <span>⚽ BUSCAR JUGADORES</span>
-            </button>
-        </form>
+        </div>
     </div>
-</div>
-<!-- Visual Context Image (Aspirational) -->
-<div class="w-100 rounded-4 overflow-hidden position-relative mb-5" style="max-width: 600px; height: 192px;">
-    <img class="w-100 h-100 object-fit-cover hover-scale" data-alt="A cinematic, low-angle shot of a vibrant green professional football pitch under bright stadium floodlights at dusk. The atmosphere is energetic and ready for action, with soft mist catching the light. The colors are dominated by deep grass greens and crisp white line markings, aligning with the clean, athletic corporate identity of a modern sports application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5kzWKQnssM6IldCARZGApiJcEP-EC0HziUH0AQUm1oc-67j71UZ6t67E3BiOuGfBekQEmGlqLkT6MLYDZy-q1LhxfLSvLVnyyvNVkd-oeFukCcqXK4o0OArz60U9d3YKp07R-Pzle2v88jVaIcQ8d3R_VJPqbYuaNrkuZHsCBzXDi_V03ZT_AanawUwto121f4TFa_te21O-Gf2jn5vkwK75ir448P_Co0-adwkXyxJ7EB9pAeDUu-NMKLsMsm50xAWTkEoBvKw" />
-    <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);">
-        <p class="text-white fw-medium fst-italic mb-0">"Tu equipo te está esperando en la cancha."</p>
-    </div>
-</div>
 </div>

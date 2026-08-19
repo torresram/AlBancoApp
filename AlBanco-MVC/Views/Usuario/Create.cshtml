@@ -1,72 +1,59 @@
-@model AlBanco_MVC.Models.Usuario
+@model RegistroUsuarioVM
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Registro";
 }
-
-<h1>Create</h1>
-
-<h4>Usuario</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-            <div class="form-group">
-                <label asp-for="Nombre" class="control-label"></label>
-                <input asp-for="Nombre" class="form-control" />
-                <span asp-validation-for="Nombre" class="text-danger"></span>
+<!-- Main Registration Canvas -->
+<div class="flex-grow-1 d-flex align-items-center justify-content-center px-3 py-5">
+    <div class="card card-custom w-100">
+        <!-- Decorative Banner -->
+        <div class="banner-bg">
+            <div class="banner-pattern"></div>
+            <div class="banner-gradient"></div>
+            <div class="banner-icon">
+                <span class="material-symbols-outlined">sports_soccer</span>
             </div>
-
-            <div class="form-group">
-                <label asp-for="WhatsApp" class="control-label"></label>
-                <input asp-for="WhatsApp" class="form-control" />
-                <span asp-validation-for="WhatsApp" class="text-danger"></span>
+        </div>
+        <!-- Content -->
+        <div class="card-body px-4 pb-4 pt-2">
+            <h1 class="fw-bold mb-1 registration-title text-on-surface">
+                Sumate a esta cancha
+            </h1>
+            <p class="text-secondary mb-4 registration-subtitle">
+                Ya estás a un paso de formar parte de la comunidad.
+            </p>
+            <!-- Registration Form -->
+            <form asp-action="Create" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="mb-3 form-group">
+                    <label class="form-label fw-semibold mb-1 registration-label" asp-for="CanchaId">Cancha</label>
+                    <select class="form-control" asp-for="CanchaId" asp-items="ViewBag.CanchaId">
+                    </select>
+                    <span asp-validation-for="CanchaId" class="text-danger"></span>
+                </div>
+                    <div class="mb-3 form-group">
+                        <label class="form-label fw-semibold mb-1 registration-label" asp-for="Nombre">Nombre Completo</label>
+                        <input class="form-control" asp-for="Nombre" placeholder="Ingresá tu nombre" required="" type="text" />
+                        <span asp-validation-for="Nombre" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label class="form-label fw-semibold mb-1 registration-label" asp-for="WhatsApp">WhatsApp</label>
+                        <div class="input-group">
+                            <span class="input-group-text border-end-0 bg-transparent">+54</span>
+                            <input class="form-control border-start-0 ps-0" asp-for="WhatsApp" placeholder="11 1234 5678" required="" />
+                        </div>
+                        <span asp-validation-for="WhatsApp" class="text-danger"></span>
+                    </div>
+                    <div class="form-check mb-4 mt-2">
+                        <input class="form-check-input" asp-for="Activo" />
+                        <label class="form-check-label text-body" asp-for="Activo">Quiero recibir alertas para jugar</label>
+                        <span asp-validation-for="Activo" class="text-danger"></span>
+                    </div>
+                    <input class="btn btn-primary-custom w-100 d-flex align-items-center justify-content-center gap-2 rounded-3 mt-4" type="submit" value="⚽ QUIERO JUGAR" />
+                </form>
+                <p class="mt-4 text-secondary px-3 registration-terms">
+                    Al registrarte, aceptás nuestros términos de uso y comunidad de jugadores.
+                </p>
             </div>
-
-            <div class="form-group">
-                <label asp-for="Activo" class="control-label"></label>
-                <input asp-for="Activo" class="form-check-input" />
-                <span asp-validation-for="Activo" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="FechaAlta" class="control-label"></label>
-                <input asp-for="FechaAlta" class="form-control" />
-                <span asp-validation-for="FechaAlta" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="CanchaId" class="control-label"></label>
-                <input asp-for="CanchaId" class="form-control" />
-                <span asp-validation-for="CanchaId" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="Cancha" class="control-label"></label>
-                <input asp-for="Cancha" class="form-control" />
-                <span asp-validation-for="Cancha" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="ConvocatoriasCreadas" class="control-label"></label>
-                <input asp-for="ConvocatoriasCreadas" class="form-control" />
-                <span asp-validation-for="ConvocatoriasCreadas" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="Confirmaciones" class="control-label"></label>
-                <input asp-for="Confirmaciones" class="form-control" />
-                <span asp-validation-for="Confirmaciones" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>

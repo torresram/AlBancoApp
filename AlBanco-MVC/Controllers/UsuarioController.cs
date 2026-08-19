@@ -1,5 +1,6 @@
 
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AlBanco_MVC.Models;
 using AlBanco_MVC.Data;
@@ -14,9 +15,24 @@ public class UsuarioController : Controller
     }
 
     // GET: USUARIOS
-    public async Task<IActionResult> Index()    
+    public async Task<IActionResult> MiPerfil(int? id)
     {
-        return View(await _context.Usuarios.ToListAsync());
+        if (id == null)
+        {
+            return RedirectToAction("Create");
+        }
+
+        var usuario = await _context.Usuarios
+            .Include(u => u.Cancha)
+            .ThenInclude(c => c.Zona)
+            .FirstOrDefaultAsync(u => u.Id == id);
+
+        if (usuario == null)
+        {
+            return NotFound();
+        }
+
+        return View(usuario);
     }
 
     // GET: USUARIOS/Details/5
@@ -38,8 +54,9 @@ public class UsuarioController : Controller
     }
 
     // GET: USUARIOS/Create
-    public IActionResult Create()
+    public async Task<IActionResult> Create()
     {
+        await LoadCanchasAsync();
         return View();
     }
 
@@ -48,15 +65,43 @@ public class UsuarioController : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create([Bind("Id,Nombre,WhatsApp,Activo,FechaAlta,CanchaId,Cancha,ConvocatoriasCreadas,Confirmaciones")] Usuario usuario)
+    public async Task<IActionResult> Create(RegistroUsuarioVM usuario)
     {
+        bool whatsappExists = await _context.Usuarios
+            .AnyAsync(u => u.WhatsApp == usuario.WhatsApp);
+
+        if(whatsappExists)
+        {
+            ModelState.AddModelError("WhatsApp", "El número de WhatsApp ya está registrado.");
+        }
+
         if (ModelState.IsValid)
         {
-            _context.Add(usuario);
+            var nuevoUsuario = new Usuario
+            {
+                Nombre = usuario.Nombre,
+                WhatsApp = usuario.WhatsApp,
+                Activo = usuario.Activo,
+                FechaAlta = DateTime.Now,
+                CanchaId = usuario.CanchaId
+            };
+
+            _context.Add(nuevoUsuario);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(MiPerfil), new { id = nuevoUsuario.Id });
         }
+
+        await LoadCanchasAsync(usuario.CanchaId);
         return View(usuario);
+    }
+
+    private async Task LoadCanchasAsync(int? selectedCanchaId = null)
+    {
+        var canchas = await _context.Canchas
+            .OrderBy(c => c.Nombre)
+            .ToListAsync();
+
+        ViewData["CanchaId"] = new SelectList(canchas, "Id", "Nombre", selectedCanchaId);
     }
 
     // GET: USUARIOS/Edit/5

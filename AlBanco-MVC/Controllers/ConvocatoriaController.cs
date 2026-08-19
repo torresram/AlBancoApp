@@ -19,6 +19,16 @@ public class ConvocatoriaController : Controller
         return View(await _context.Convocatorias.ToListAsync());
     }
 
+    public async Task<IActionResult> FaltaUno()
+    {
+        return View();
+    }
+
+    public async Task<IActionResult> MisPartidos()
+    {
+        return View();
+    }
+
     // GET: CONVOCATORIAS/Details/5
     public async Task<IActionResult> Details(int? id)
     {
